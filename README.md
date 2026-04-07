@@ -46,3 +46,12 @@ You can install them with:
 
 ```bash
 pip install numpy pandas matplotlib
+
+## How to run
+
+Place all files in the same folder.
+
+### Run the full pipeline
+
+```bash
+python3 run_full_pipeline.py
