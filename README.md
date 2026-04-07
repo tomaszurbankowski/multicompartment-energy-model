@@ -46,6 +46,7 @@ You can install them with:
 
 ```bash
 pip install numpy pandas matplotlib
+```
 
 ## How to run
 
@@ -55,3 +56,53 @@ Place all files in the same folder.
 
 ```bash
 python3 run_full_pipeline.py
+```
+
+### Or run step by step
+
+First run the simulations:
+
+```bash
+python3 virtual_phenotypes_energy_model.py
+```
+
+Then generate the figures:
+
+```bash
+python3 generate_publication_figures.py
+```
+
+## Output files
+
+Running the model script generates:
+- `simulation_results.csv`
+- `phenotype_sensitivity.csv`
+- `mp_matched_divergence.csv`
+- `phenotype_definitions.csv`
+
+It also generates intermediate exploratory figures:
+- `figure_baseline_ref.png`
+- `figure_eii_heatmap_*.png`
+- `figure_mp_vs_dces.png`
+- `figure_phenotype_sensitivity.png`
+
+Running the figure-generation script creates publication-ready figures:
+- `Figure1_phenotypes_baseline_ref.png/.svg/.pdf`
+- `Figure2_EII_heatmaps.png/.svg/.pdf`
+- `Figure3_MP_DCES_divergence.png/.svg/.pdf`
+- `Figure4_sensitivity_summary.png/.svg/.pdf`
+- `figure_summary.json`
+
+All outputs are saved to the same folder as the scripts.
+
+## Notes
+
+This code is intended for research and educational use. It is a simplified in silico model and is not intended for clinical decision-making.
+
+## Citation
+
+If you use this code in academic work, please cite the associated manuscript when available.
+
+## License
+
+This repository is distributed under the MIT License. See the `LICENSE` file for details.
